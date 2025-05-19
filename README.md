@@ -31,7 +31,7 @@ AWS RDS (PostgreSQL): 데이터베이스 관리
 
 AWS S3: 정적 파일 저장
 
-Docker: 컨테이너화 및 이식성 확보
+Docker: 컨테이너 환경 배포
 
 GitHub Actions: CI/CD 파이프라인 구축
 <br>
