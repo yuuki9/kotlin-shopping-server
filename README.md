@@ -1,6 +1,7 @@
 # kotlin-shopping-server
 🛒클라우드 네이티브 환경에서 헥사고날 아키텍처를 적용한 쇼핑몰 서버를 구축하는 것을 목표
-
+<br>
+<br>
 🎯 프로젝트 개요
 언어 및 프레임워크: Kotlin, Spring Boot
 
@@ -13,8 +14,8 @@
 배포 환경: AWS 프리티어 (EC2, RDS, S3 등)
 
 CI/CD: GitHub Actions, Docker
-
-
+<br>
+<br>
 🧪 테스트 전략
 단위 테스트: 도메인 및 애플리케이션 계층의 로직 검증
 
@@ -22,8 +23,8 @@ CI/CD: GitHub Actions, Docker
 
 계측 테스트: API 엔드포인트 및 전체 플로우 검증
 레딧
-
-
+<br>
+<br>
 ☁️ 클라우드 네이티브 환경
 AWS EC2: 애플리케이션 서버 호스팅
 
@@ -34,8 +35,8 @@ AWS S3: 정적 파일 저장
 Docker: 컨테이너화 및 이식성 확보
 
 GitHub Actions: CI/CD 파이프라인 구축
-
-
+<br>
+<br>
 📦 주요 기능
 상품 등록 및 조회
 
