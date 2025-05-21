@@ -1,5 +1,7 @@
 ##  🛒커머스 서버
 ###  🎯 프로젝트 개요
+자바 : 17
+
 언어 및 프레임워크: Kotlin, Spring Boot
 
 아키텍처: 헥사고날 아키텍처 (Ports & Adapters)
