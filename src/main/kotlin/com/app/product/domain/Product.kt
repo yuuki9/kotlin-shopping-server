@@ -19,7 +19,7 @@ class Product(
         val stockQuantity : Long,
         val status : ProductStatus,
         val createAt : LocalDateTime,
-        val updatedAt : LocalDateTime
+        val updatedAt : LocalDateTime? = null
 )
 
 enum class ProductStatus {

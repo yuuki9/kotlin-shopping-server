@@ -18,7 +18,6 @@ class CreateProductService (
                 stockQuantity = command.stockQuantity,
                 status = ProductStatus.ON_SALE,
                 createAt = LocalDateTime.now(),
-                updatedAt = LocalDateTime.now()
         )
         productRepository.save(product)
     }
