@@ -5,11 +5,7 @@ import java.time.LocalDateTime
 
 data class ProductId(val value: Long)
 data class ProductName(val value: String)
-data class Price(val value: BigDecimal) {
-    init {
-        require(value >= BigDecimal.ZERO) { "가격은 0원 이상이어야 합니다." }
-    }
-}
+data class Price(val value: BigDecimal)
 
 class Product(
         val id: ProductId? = null,
