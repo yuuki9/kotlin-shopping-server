@@ -4,7 +4,7 @@ import com.app.product.domain.Product
 import com.app.product.domain.ProductId
 
 interface ProductRepository {
-    fun save(product: Product)
+    fun save(product: Product) : Product
     fun findById(id: ProductId): Product?
     fun getList() : List<Product>
 
