@@ -10,12 +10,10 @@ import java.time.LocalDateTime
 
 class CreateProductService (
         private val productRepository: ProductRepository,
-        private val validator: ProductPolicyValidator,
         private val productMapper: ProductMapper
 ) : CreateProductUseCase {
 
     override fun create(command: CreateProductCommand) : Product {
-        validator.validate(command)
         val product = productMapper.toDomain(command)
         return productRepository.save(product)
     }

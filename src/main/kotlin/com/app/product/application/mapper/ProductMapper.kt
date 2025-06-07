@@ -20,4 +20,5 @@ class ProductMapper (private val validator: ProductPolicyValidator){
                 description = cmd.description
         )
     }
+
 }

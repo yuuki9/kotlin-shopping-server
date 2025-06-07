@@ -28,9 +28,9 @@ class CreateProductServiceTest {
     @BeforeEach
     fun setup() {
         productRepository = mock()
-        productMapper = mock()
+        productMapper = ProductMapper(productPolicyValidator)
         productPolicyValidator = mock()
-        target = CreateProductService(productRepository, productPolicyValidator, productMapper)
+        target = CreateProductService(productRepository, productMapper)
     }
     @Test @DisplayName("CreateProductService - 상품 등록 성공테스트")
     fun testCreateProduct_positive() {
@@ -69,4 +69,5 @@ class CreateProductServiceTest {
         assertThat(product.status).isEqualTo(ProductStatus.ON_SALE)
 
     }
+
 }
