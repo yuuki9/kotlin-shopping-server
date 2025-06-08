@@ -1,10 +1,8 @@
 package com.app.domain.product.service
 
-import com.app.product.application.mapper.ProductMapper
-import com.app.product.application.port.output.ProductRepository
-import com.app.product.application.service.CreateProductService
-import com.app.product.application.service.GetProductListService
-import com.app.product.domain.validator.ProductPolicyValidator
+import com.app.product.domain.repository.ProductRepository
+import com.app.product.application.port.input.usecase.Impl.CreateProductService
+import com.app.product.application.port.input.usecase.Impl.GetProductListService
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test

@@ -1,9 +1,9 @@
-package com.app.product.application.service
+package com.app.product.application.port.input.usecase.Impl
 
 import com.app.product.application.port.input.command.GetProductListQuery
 import com.app.product.application.port.input.usecase.GetProductListUseCase
-import com.app.product.application.port.output.ProductRepository
-import com.app.product.domain.Product
+import com.app.product.domain.repository.ProductRepository
+import com.app.product.domain.model.Product
 
 class GetProductListService(
         private val productRepository: ProductRepository

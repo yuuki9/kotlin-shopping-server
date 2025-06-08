@@ -1,11 +1,10 @@
 package com.app.product.domain.validator.Impl
 
 import com.app.product.application.port.input.command.CreateProductCommand
-import com.app.product.application.port.output.ProductRepository
-import com.app.product.domain.ProductStatus
+import com.app.product.domain.repository.ProductRepository
+import com.app.product.domain.model.ProductStatus
 import com.app.product.domain.validator.ProductPolicyValidator
 import org.springframework.stereotype.Component
-import org.springframework.stereotype.Service
 import java.math.BigDecimal
 
 @Component
