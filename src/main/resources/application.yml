@@ -1,0 +1,9 @@
+server:
+  port: 25694
+  servlet:
+
+debug: false
+
+spring:
+  profiles:
+    include: dev

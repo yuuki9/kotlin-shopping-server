@@ -1,0 +1,22 @@
+# JPA Properties
+spring:
+  profiles: dev
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    database: postgresql
+    hibernate:
+      ddl-auto: false
+    generate-ddl: true
+  servlet:
+    multipart:
+      file-size-threshold: 1MB
+      max-file-size: 100MB
+      max-request-size: 100MB
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:27777/marketwawa
+    username: postgres
+    password: postgres

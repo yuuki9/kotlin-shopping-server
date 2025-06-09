@@ -1,4 +1,4 @@
-package com.app.product.application.port.output
+package com.app.product.domain.repository
 
 import com.app.product.domain.model.Product
 import com.app.product.domain.model.ProductId
@@ -9,6 +9,4 @@ interface ProductRepository {
     fun getList() : List<Product>
 
     fun existsByName(name : String): Boolean
-
-
 }
