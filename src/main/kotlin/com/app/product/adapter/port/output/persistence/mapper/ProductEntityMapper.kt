@@ -1,4 +1,4 @@
-package com.app.product.adapter.output.persistence.mapper
+package com.app.product.adapter.port.output.persistence.mapper
 
 
 class ProductEntityMapper {

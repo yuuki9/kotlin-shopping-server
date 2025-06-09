@@ -45,14 +45,14 @@ class CreateProductServiceTest {
                 stockQuantity = 10,
 
         )
-
+        val fixedTime = LocalDateTime.of(2023, 1, 1, 0, 0)
         val product = Product(
                 name = ProductName("반팔 티셔츠"),
                 description = "여름용 의류",
                 price = Price(BigDecimal(10000)),
                 stockQuantity = 10,
                 status = ProductStatus.ON_SALE,
-                createAt = LocalDateTime.now()
+                createAt = fixedTime
         )
 
         whenever(productMapper.toDomain(command)).thenReturn(product)
