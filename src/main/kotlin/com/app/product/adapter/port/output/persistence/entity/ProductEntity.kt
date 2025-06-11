@@ -2,6 +2,7 @@ package com.app.product.adapter.port.output.persistence.entity
 
 import com.app.product.domain.model.ProductStatus
 import jakarta.persistence.*
+import java.math.BigDecimal
 import java.time.LocalDateTime
 
 @Entity
@@ -15,7 +16,7 @@ class ProductEntity(
     val name: String,
 
     @Column(name = "product_price")
-    val price: String,
+    val price: BigDecimal,
 
     @Column(name = "product_des")
     val description: String,
@@ -31,5 +32,5 @@ class ProductEntity(
     var createAt: LocalDateTime,
 
     @Column(name = "update_at")
-    var updateAt: LocalDateTime
+    var updateAt: LocalDateTime?
 )
