@@ -13,7 +13,7 @@
 
 테스트: JUnit, Testcontainers
 
-배포 환경: AWS 프리티어 (EC2, RDS, S3 등)
+배포 환경: AWS 프리티어 (EC2, RDS, S3)
 
 CI/CD: GitHub Actions, Docker
 
