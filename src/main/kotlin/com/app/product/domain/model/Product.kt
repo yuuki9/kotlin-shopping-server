@@ -15,9 +15,19 @@ class Product(
     val stockQuantity : Long,
     val status : ProductStatus,
     val createAt : LocalDateTime,
-    val updatedAt : LocalDateTime? = null
+    val updatedAt : LocalDateTime? = null,
+    val gender: Gender,
+    val category: Category
 )
 
 enum class ProductStatus {
     ON_SALE, SOLD_OUT, DELETED
+}
+
+enum class Gender {
+    WOMEN, MEN, UNISEX
+}
+
+enum class Category {
+    TOP, BOTTOM, OUTER, ACCESSORY
 }

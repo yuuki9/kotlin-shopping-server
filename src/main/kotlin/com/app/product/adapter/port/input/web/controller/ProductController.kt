@@ -12,6 +12,7 @@ class ProductController(
 ) {
     @PostMapping("/products")
     fun register(@RequestBody request: CreateProductRequest) {
+        createProductUseCase.create(request.toCommand())
 
     }
 }

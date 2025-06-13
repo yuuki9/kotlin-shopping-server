@@ -4,10 +4,7 @@ import com.app.product.application.port.input.command.GetProductListQuery
 import com.app.product.application.port.input.usecase.Impl.CreateProductService
 import com.app.product.application.port.input.usecase.Impl.GetProductListService
 import com.app.product.application.port.output.ProductRepository
-import com.app.product.domain.model.Price
-import com.app.product.domain.model.Product
-import com.app.product.domain.model.ProductName
-import com.app.product.domain.model.ProductStatus
+import com.app.product.domain.model.*
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
@@ -45,7 +42,9 @@ class GetProductListServiceTest {
                 price = Price(BigDecimal(10000)),
                 stockQuantity = 10,
                 status = ProductStatus.ON_SALE,
-                createAt = fixedTime
+                createAt = fixedTime,
+                category = Category.TOP,
+                gender = Gender.MEN
             )
         )
 
@@ -80,7 +79,9 @@ class GetProductListServiceTest {
                 price = Price(BigDecimal(10000)),
                 stockQuantity = 10,
                 status = ProductStatus.ON_SALE,
-                createAt = fixedTime
+                createAt = fixedTime,
+                category = Category.TOP,
+                gender = Gender.MEN
             )
         )
     }

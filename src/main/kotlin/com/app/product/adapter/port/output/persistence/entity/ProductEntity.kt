@@ -1,5 +1,7 @@
 package com.app.product.adapter.port.output.persistence.entity
 
+import com.app.product.domain.model.Category
+import com.app.product.domain.model.Gender
 import com.app.product.domain.model.ProductStatus
 import jakarta.persistence.*
 import java.math.BigDecimal
@@ -27,6 +29,14 @@ class ProductEntity(
     @Enumerated(EnumType.STRING)
     @Column(name = "product_status")
     val status: ProductStatus,
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "product_gender")
+    val gender: Gender,
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "product_category")
+    val category: Category,
 
     @Column(name = "create_at")
     var createAt: LocalDateTime,

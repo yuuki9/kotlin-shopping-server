@@ -19,7 +19,9 @@ class ProductEntityMapper {
             stockQuantity = domain.stockQuantity,
             status = domain.status,
             createAt = domain.createAt,
-            updateAt = domain.updatedAt
+            updateAt = domain.updatedAt,
+            gender = domain.gender,
+            category = domain.category
         )
     }
 
@@ -32,7 +34,9 @@ class ProductEntityMapper {
             status = productEntity.status,
             createAt = productEntity.createAt,
             description = productEntity.description,
-            updatedAt = productEntity.updateAt
+            updatedAt = productEntity.updateAt,
+            gender = productEntity.gender,
+            category = productEntity.category
         )
     }
 }

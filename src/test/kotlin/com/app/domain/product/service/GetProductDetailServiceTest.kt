@@ -18,12 +18,14 @@ import java.time.LocalDateTime
 
 class GetProductDetailServiceTest {
     private lateinit var productRepository: ProductRepository
-    private lateinit var target : GetProductDetailService
+    private lateinit var target: GetProductDetailService
+
     @BeforeEach
     fun setup() {
         productRepository = mock()
         target = GetProductDetailService(productRepository)
     }
+
     @Test
     @DisplayName("GetProductListService - 상품 개별 조회 성공테스트")
     fun testProductDetail_positive() {
@@ -33,13 +35,15 @@ class GetProductDetailServiceTest {
         val fixedTime = LocalDateTime.of(2023, 1, 1, 0, 0)
 
         val product = Product(
-                name = ProductName("반팔 티셔츠"),
-                description = "여름용 의류",
-                price = Price(BigDecimal(10000)),
-                stockQuantity = 10,
-                status = ProductStatus.ON_SALE,
-                createAt = fixedTime
-            )
+            name = ProductName("반팔 티셔츠"),
+            description = "여름용 의류",
+            price = Price(BigDecimal(10000)),
+            stockQuantity = 10,
+            status = ProductStatus.ON_SALE,
+            createAt = fixedTime,
+            category = Category.TOP,
+            gender = Gender.MEN
+        )
 
 
         //when
