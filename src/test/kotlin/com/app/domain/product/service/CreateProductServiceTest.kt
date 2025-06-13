@@ -4,10 +4,7 @@ import com.app.product.application.mapper.ProductMapper
 import com.app.product.application.port.input.command.CreateProductCommand
 import com.app.product.domain.repository.ProductRepository
 import com.app.product.application.port.input.usecase.Impl.CreateProductService
-import com.app.product.domain.model.Price
-import com.app.product.domain.model.Product
-import com.app.product.domain.model.ProductName
-import com.app.product.domain.model.ProductStatus
+import com.app.product.domain.model.*
 import com.app.product.domain.validator.ProductPolicyValidator
 import org.assertj.core.api.Assertions.assertThat
 
@@ -27,7 +24,8 @@ class CreateProductServiceTest {
     private lateinit var productRepository: ProductRepository
     private lateinit var productMapper: ProductMapper
     private lateinit var productPolicyValidator: ProductPolicyValidator
-    private lateinit var target : CreateProductService
+    private lateinit var target: CreateProductService
+
     @BeforeEach
     fun setup() {
         productRepository = mock()
@@ -35,24 +33,29 @@ class CreateProductServiceTest {
         productPolicyValidator = mock()
         target = CreateProductService(productRepository, productMapper)
     }
-    @Test @DisplayName("CreateProductService - 상품 등록 성공테스트")
+
+    @Test
+    @DisplayName("CreateProductService - 상품 등록 성공테스트")
     fun testCreateProduct_positive() {
         // given
         val command = CreateProductCommand(
-                name = "반팔 티셔츠",
-                description = "여름용 의류",
-                price = BigDecimal(10000),
-                stockQuantity = 10,
-
-        )
+            name = "반팔 티셔츠",
+            description = "여름용 의류",
+            price = BigDecimal(10000),
+            stockQuantity = 10,
+            category = Category.TOP,
+            gender = Gender.MEN
+            )
         val fixedTime = LocalDateTime.of(2023, 1, 1, 0, 0)
         val product = Product(
-                name = ProductName("반팔 티셔츠"),
-                description = "여름용 의류",
-                price = Price(BigDecimal(10000)),
-                stockQuantity = 10,
-                status = ProductStatus.ON_SALE,
-                createAt = fixedTime
+            name = ProductName("반팔 티셔츠"),
+            description = "여름용 의류",
+            price = Price(BigDecimal(10000)),
+            stockQuantity = 10,
+            status = ProductStatus.ON_SALE,
+            createAt = fixedTime,
+            category = Category.TOP,
+            gender = Gender.MEN
         )
 
         whenever(productMapper.toDomain(command)).thenReturn(product)
@@ -66,7 +69,7 @@ class CreateProductServiceTest {
         verify(productPolicyValidator).validate(command)
         verify(productMapper).toDomain(command)
         verify(productRepository).save(product)
-        
+
         //상태 검증
         assertThat(result.name).isEqualTo(product.name)
         assertThat(product.status).isEqualTo(ProductStatus.ON_SALE)
