@@ -1,8 +1,6 @@
 package com.app.product.application.port.input.command
 
-import com.app.product.domain.model.Price
-import com.app.product.domain.model.ProductId
-import com.app.product.domain.model.ProductStatus
+import com.app.product.domain.model.*
 
 data class UpdateProductCommand(
     val productId: ProductId,
@@ -10,5 +8,7 @@ data class UpdateProductCommand(
     val price: Price?,
     val description: String?,
     val stockQuantity: Long?,
-    val status: ProductStatus?
+    val status: ProductStatus?,
+    val gender : Gender,
+    val category: Category
 )

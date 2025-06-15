@@ -1,6 +1,7 @@
 package com.app.product.domain.validator.Impl
 
 import com.app.product.application.port.input.command.CreateProductCommand
+import com.app.product.domain.model.Product
 import com.app.product.domain.repository.ProductRepository
 import com.app.product.domain.model.ProductStatus
 import com.app.product.domain.validator.ProductPolicyValidator
@@ -16,8 +17,8 @@ class ProductCreationPolicyValidatorImpl(
     //상품소개는 1000자 이하
     //가격은 0원 이상이여야 한다
     //상품생성시 상태는 판매중만 허용
-    override fun validate(command: CreateProductCommand) {
-        validateName(command.name)
+    override fun validate(domain: Product) {
+        validateName(domain.name.value)
     }
 
     private fun validateName(name : String) {
