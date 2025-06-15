@@ -1,8 +1,8 @@
 ##  🛒 WaWaMarket 와와마켓
-###  🎯 프로젝트 개요
-
 #### 쇼핑몰 토이프로젝트
 
+
+##### Development Environment
 자바 : 17
 
 언어 및 프레임워크: Kotlin, Spring Boot
